@@ -1,0 +1,361 @@
+WEBVTT
+
+00:04.120 --> 00:08.220
+Come back in this video I will show you how to get from one scene to another.
+
+00:08.450 --> 00:11.270
+So let's create a new scene.
+
+00:11.270 --> 00:18.450
+We can do that in multiple ways for example create and scene or we could duplicate our main scene and
+
+00:18.740 --> 00:22.540
+well let's go ahead and simply create a new scene.
+
+00:22.880 --> 00:27.790
+So create a scene and I'm going to call that level 1.
+
+00:27.800 --> 00:34.760
+So now we get from Main to for example Level 1 let's click on level 1 and save the current scene that
+
+00:34.760 --> 00:36.370
+we are at.
+
+00:36.580 --> 00:39.060
+And now you can see in this scene there is nothing.
+
+00:39.320 --> 00:47.900
+So the only thing that I'm going to add to our level one scene is a UI and UI which I call text which
+
+00:47.900 --> 00:54.250
+is the text and it's just going to say Level 2.
+
+00:57.240 --> 01:05.520
+And I'm going to center that and position it in the center.
+
+01:05.520 --> 01:08.290
+Now I'm going to add a little button here as well.
+
+01:08.400 --> 01:21.110
+I button and the text of the button is going to say move to main screen and that's it.
+
+01:21.380 --> 01:27.230
+So what I want to do is I want to get from this scene to the main scene and from the main scene I want
+
+01:27.230 --> 01:29.170
+to get to the level 1 scene.
+
+01:29.540 --> 01:35.270
+So set a safe level 1 the scene control us and then go to your main scene.
+
+01:35.270 --> 01:44.340
+And now this button here what it should do is move us to level 1 code to level 1.
+
+01:44.340 --> 01:46.860
+All right.
+
+01:46.970 --> 01:49.200
+Now the button already has a behavior.
+
+01:49.250 --> 01:51.150
+So this one has a behavior already.
+
+01:51.170 --> 01:52.220
+So let's change that.
+
+01:52.220 --> 01:53.940
+Let's go to Buckton behavior.
+
+01:54.440 --> 02:01.500
+And what I want to do here is I want to change the on button pressed here.
+
+02:01.580 --> 02:05.590
+I don't want to set the text of our score.
+
+02:05.630 --> 02:12.950
+I want to move from one scene to another so I can get rid of this text and I can get rid of this line
+
+02:12.950 --> 02:13.660
+as well.
+
+02:13.880 --> 02:19.810
+And while we're at it we can also get rid of unity engine because we're not using it right now.
+
+02:20.060 --> 02:26.170
+While I will need however is the scene manager which allows us to move from one scene to another.
+
+02:26.330 --> 02:30.420
+So let's go ahead and use the unity engine.
+
+02:30.500 --> 02:33.240
+Scene management.
+
+02:33.710 --> 02:42.200
+And that one contains the scene manager because only if you add this namespace you'll be you'll be able
+
+02:42.200 --> 02:44.020
+to use a scene manager.
+
+02:44.030 --> 02:50.070
+So let's open up the scene manager and that scene manager has multiple different methods and the one
+
+02:50.070 --> 02:55.010
+that is important for us currently is the loud scene method.
+
+02:55.130 --> 02:59.480
+What that will do is it will allow us to move from one scene to another.
+
+02:59.480 --> 03:04.420
+And as you can see it has multiple overloads it has an entire scene build index.
+
+03:04.490 --> 03:09.020
+It has a string scene name and it also has some other options.
+
+03:09.020 --> 03:15.800
+For example this load's scene mode argument we're just going to use the one where we can simply add
+
+03:15.800 --> 03:19.310
+the index of the scene that we want to go to.
+
+03:19.310 --> 03:26.850
+So let's say I want to go to scene 1 or I could go to scene level 1.
+
+03:27.290 --> 03:28.360
+So let's save that.
+
+03:28.430 --> 03:35.420
+Let's have a look if that's the right name actually is level without empty space 1.
+
+03:35.570 --> 03:39.350
+So let's make sure that this is the right name would save that.
+
+03:39.340 --> 03:44.580
+And now whenever somebody presses on this button he should go from Main to level 1.
+
+03:44.720 --> 03:45.930
+So let's test that.
+
+03:46.100 --> 03:49.430
+He will actually run into an arrow first but let's see what happens.
+
+03:49.460 --> 03:58.950
+So I run around it and I press on go to Level 1 and I get a an arrow here that says stop the game see
+
+03:58.970 --> 04:05.050
+Level 1 cannot be loaded because it has not been added to the build settings or the built bundle.
+
+04:05.150 --> 04:09.580
+And if ever if you ever see this error there is one very simple solution.
+
+04:09.650 --> 04:17.040
+You go to File build settings and in here you add the scenes that you want to have in there.
+
+04:17.210 --> 04:22.240
+So you add scene Maine and you add scene level 1.
+
+04:22.280 --> 04:28.670
+Now you can close that up by the way what you should memorize is to zero in this one so mine is zero
+
+04:29.060 --> 04:30.900
+and Level 1 is 1.
+
+04:31.070 --> 04:33.520
+Actually let's make sure that it's like that.
+
+04:33.530 --> 04:36.660
+So here they index the scene index.
+
+04:36.680 --> 04:39.520
+That's this number here at the right hand side.
+
+04:39.980 --> 04:46.460
+So now let's close it and let's run the code again and see if we can move from scene from our main scene
+
+04:46.490 --> 04:52.160
+to our level once in by way here on the right hand side you can see that we are currently in Maine.
+
+04:52.190 --> 04:57.810
+So let's click on the button and now you can see we are in the scene level one at the same time.
+
+04:57.830 --> 05:03.080
+You see that the text has changed and now it's moved to main scene so this is a different scene that
+
+05:03.080 --> 05:03.970
+we are at.
+
+05:04.190 --> 05:10.800
+And you can use that to for example move from from the start screen where the player can simply start
+
+05:10.800 --> 05:17.870
+the game where you can see the high score and maybe change the settings to the game scene itself or
+
+05:17.870 --> 05:19.660
+to a specific level.
+
+05:19.760 --> 05:25.610
+You could even build for example 20 different buttons here and button one is level 1 button to level
+
+05:25.610 --> 05:27.600
+2 and so forth.
+
+05:28.010 --> 05:32.500
+So now if we press move to main scene of course nothing happens.
+
+05:32.780 --> 05:40.820
+So for us a little challenge please go ahead and try to add the functionality to our level 1 scene so
+
+05:40.820 --> 05:49.670
+that you can move from this scene to our main scene so positively and try that all right I hope you
+
+05:49.670 --> 05:50.570
+try it.
+
+05:50.570 --> 05:52.850
+So let's go ahead and do that.
+
+05:53.210 --> 05:56.660
+And there are multiple different ways.
+
+05:56.720 --> 06:02.240
+For example you could create a very new script and you could assign that script to your button and then
+
+06:02.240 --> 06:05.380
+you could move from this green to another screen.
+
+06:05.480 --> 06:07.740
+But I'm going to show you a cleaner way.
+
+06:07.760 --> 06:10.460
+Let's say so let's go to button behavior.
+
+06:10.630 --> 06:15.770
+And now we go ahead and change that from one button press which is the name that I have just used in
+
+06:15.770 --> 06:20.490
+order for you to see that this was called when we press the button.
+
+06:20.600 --> 06:26.570
+But I actually want to have a method that has a better name which explains a bit better what should
+
+06:26.570 --> 06:27.170
+happen.
+
+06:27.380 --> 06:30.920
+So the method should not be called on button pressed this time.
+
+06:30.950 --> 06:35.530
+But move to scene.
+
+06:35.600 --> 06:38.550
+So now this method will move from one scene to another.
+
+06:38.690 --> 06:43.530
+And as an argument I'm going to add an integer.
+
+06:43.680 --> 06:45.100
+I'm going to call scene ID.
+
+06:45.320 --> 06:56.590
+And now we load the scene and we don't load level 1 but what we do is we load the scene Id right.
+
+06:56.600 --> 07:04.370
+And now what we can do is we can add that to our button let's add the button behavior to our button
+
+07:04.490 --> 07:05.640
+object.
+
+07:05.750 --> 07:08.230
+So script button behavior.
+
+07:08.350 --> 07:11.590
+And now we can add an On Click event here listing.
+
+07:11.750 --> 07:16.640
+Next we need to direct the button behavior in here so you can see it has been added.
+
+07:16.640 --> 07:19.820
+Now we can choose the pattern behavior
+
+07:22.660 --> 07:24.910
+and they're move to scene.
+
+07:25.250 --> 07:28.600
+Now expect an int which is this number here.
+
+07:28.600 --> 07:34.630
+So it's currently number 0 which is in fact the scene that we want to go to.
+
+07:34.630 --> 07:44.080
+So if we go to build settings we can see the main scene has the index 0 seen index 0 which means that
+
+07:44.080 --> 07:46.110
+it's the right scene.
+
+07:46.110 --> 07:46.420
+All right.
+
+07:46.420 --> 07:51.150
+So let's go ahead and go to our main scene as well in here.
+
+07:51.280 --> 07:58.990
+We have our canvas and the button and now the button is missing the on button pressing at that.
+
+07:59.020 --> 08:03.190
+Of course he's missing it because it doesn't exist anymore I changed the name of it.
+
+08:03.220 --> 08:08.020
+So whenever you do that you have to be super careful because in here it has not been changed.
+
+08:08.020 --> 08:20.690
+So what I'm doing now is I'm choosing to move to scene and here I enter one because our level 1 scene
+
+08:21.110 --> 08:23.060
+has the index of one.
+
+08:23.120 --> 08:30.530
+So now I'm going to move from zero from zero which is our main scene to scene one which is our level
+
+08:30.530 --> 08:31.480
+1 scene.
+
+08:31.850 --> 08:33.210
+So let's test that.
+
+08:37.130 --> 08:38.690
+Now let's go to Level 1.
+
+08:38.930 --> 08:39.950
+Let's press on it.
+
+08:40.130 --> 08:43.430
+You can see we are in our Level 1 scene.
+
+08:43.580 --> 08:49.670
+Now let's press move to main scene and we see we go back to our level one scene.
+
+08:49.670 --> 08:56.930
+All right so now you have seen how you can use methods and buttons in order to move from one scene to
+
+08:56.930 --> 08:57.830
+another.
+
+08:57.830 --> 09:01.210
+Of course you can call the scene manager.
+
+09:01.220 --> 09:04.490
+So this code here at any point you could.
+
+09:04.490 --> 09:10.310
+Example for example say as soon as the player has lost or as soon as the player has died please load
+
+09:10.310 --> 09:18.080
+the game overseen or as soon as the player has reached the end of this level go to the next level.
+
+09:18.110 --> 09:24.040
+So that could be done dynamically and not by user input as it is currently with the buttons.
+
+09:24.140 --> 09:29.220
+But I just wanted to show you how it's possible to do it via via buttons.
+
+09:29.300 --> 09:35.320
+That's it for buttons and their click events and also for moving from scene to scene be.

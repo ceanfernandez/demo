@@ -1,0 +1,361 @@
+WEBVTT
+
+00:04.010 --> 00:08.900
+Work come back in this video we are going to have a look at sounds and how we can use them within our
+
+00:08.900 --> 00:09.550
+games.
+
+00:09.800 --> 00:12.920
+So you can simply google for royalty free game sounds.
+
+00:12.950 --> 00:20.480
+And there you can find some websites which have multiple sounds 1000 free sound effects music tracks
+
+00:20.480 --> 00:22.610
+loops for games and so forth.
+
+00:22.610 --> 00:29.780
+As you can see you can find very many websites which have this sort of free sound sound Bible audio
+
+00:29.780 --> 00:30.490
+and music.
+
+00:30.500 --> 00:31.770
+Unity as its store.
+
+00:31.820 --> 00:38.900
+So there is one called free game music which is great and which we are going to use so well that's one
+
+00:38.900 --> 00:43.420
+option of course you can go to pay just like free sound for example.
+
+00:43.460 --> 00:49.180
+They are by Caston Flash who has created quite some music so space sound.
+
+00:49.220 --> 00:57.010
+A San Antonio Earthman which means sun tunnel open mysterious sounds and so forth.
+
+00:57.220 --> 01:02.520
+So if you want to have a bean within your game you can simply download this being here.
+
+01:02.780 --> 01:07.160
+But on this page you will have to log in to download the sound.
+
+01:07.420 --> 01:11.190
+But that's how the beam would sound for example.
+
+01:11.420 --> 01:16.100
+Well you can google and find great sounds online quite easily.
+
+01:16.100 --> 01:19.770
+But be careful that their license is Creative Commons zero.
+
+01:19.940 --> 01:25.240
+So it means that you may use them for free without having to pay any royalty fees and so on.
+
+01:25.250 --> 01:25.550
+All right.
+
+01:25.550 --> 01:32.340
+So let's go to unity let's search for absolutely free music.
+
+01:32.480 --> 01:33.420
+All right so let's go ahead.
+
+01:33.440 --> 01:37.280
+Absolutely.
+
+01:37.280 --> 01:43.840
+Free music and you'll find this as sent here by Virtex studio.
+
+01:44.150 --> 01:49.580
+And you can download that so you can download the whole package and only import just the music that
+
+01:49.580 --> 01:50.820
+you want to use.
+
+01:51.260 --> 01:58.380
+As I have already downloaded it I can import it directly and I'm just going to use any of the sounds.
+
+01:58.550 --> 02:04.970
+It's decompressing it and I don't want to use all of them but let's just use number one.
+
+02:05.210 --> 02:07.020
+That's important.
+
+02:08.270 --> 02:14.650
+And in this case I'm actually going to get rid of my canvas and my game manager.
+
+02:14.870 --> 02:15.950
+So let's delete those.
+
+02:15.950 --> 02:17.920
+No I only have my cue.
+
+02:18.590 --> 02:20.910
+Let's go back to our scene as you see.
+
+02:20.980 --> 02:27.110
+There is a new folder here called Game music and it has one sound here which is an audio file which
+
+02:27.110 --> 02:29.050
+you can now use in your game.
+
+02:29.060 --> 02:31.090
+So let's go to our cube.
+
+02:31.520 --> 02:32.870
+That's where it is.
+
+02:33.170 --> 02:39.410
+And what I want to do is I want to add a sound onto my cube itself.
+
+02:39.590 --> 02:44.960
+So let's add a component and an audio component to be precise.
+
+02:44.990 --> 02:47.490
+And then hear audio source.
+
+02:48.130 --> 02:54.510
+Let's add an audio source as you can see the audience audio source now expects an audio clip and that
+
+02:54.520 --> 02:55.010
+here.
+
+02:55.030 --> 02:57.950
+That little piece of music is an audio clip.
+
+02:57.950 --> 03:03.460
+So what you can do now is direct that audio clip into your audio source.
+
+03:04.010 --> 03:09.130
+And now it's reduced the volume because that would be a bit too loud.
+
+03:09.560 --> 03:10.660
+All right let's get started.
+
+03:10.700 --> 03:18.860
+Let's play the music or play the game and you might hear that there are some sounds coming and you can
+
+03:18.860 --> 03:23.790
+change the pitch here you can change the volume the priority any time.
+
+03:24.830 --> 03:29.570
+And the music only starts playing because now here it says play on away.
+
+03:29.720 --> 03:38.140
+So as soon as the object that contains this audio source is a awoken we will hear the music.
+
+03:38.270 --> 03:44.360
+So I'm just going to change the volume to zero then another important piece is this loop loop will allow
+
+03:44.360 --> 03:47.780
+us to run the sound over and over again.
+
+03:47.780 --> 03:55.060
+So as soon as the sound or the music is done it will start off from the beginning.
+
+03:55.070 --> 04:00.950
+Now of course there are multiple other properties here as you can see and you can access those later
+
+04:00.950 --> 04:03.620
+on via code.
+
+04:03.830 --> 04:08.310
+Now let's have a quick look how we can start to sound via code.
+
+04:08.480 --> 04:16.320
+So let's add a component in your script and I'm going to call that sound behavior.
+
+04:17.900 --> 04:20.830
+And I add that to our cube I'm going to keep it simple.
+
+04:21.080 --> 04:28.490
+So let's open up that sound behavior script and then hear what I want to do is I want to start to sound
+
+04:28.580 --> 04:30.630
+as soon as I press a button.
+
+04:30.830 --> 04:35.270
+So actually I need the update method and the update method is going to work like that.
+
+04:35.270 --> 04:44.750
+I'm going to say if there is input so if the player presses a button get key down and the key code will
+
+04:44.750 --> 04:48.170
+be let's say space.
+
+04:49.130 --> 04:52.780
+So if the player presses space go ahead and start.
+
+04:52.820 --> 04:53.360
+Sound.
+
+04:53.390 --> 05:01.100
+So to start sound and how do I get the sound what I need to get an audio source here.
+
+05:01.220 --> 05:05.850
+So public audio source
+
+05:10.260 --> 05:13.510
+and I'm just going to call that music now.
+
+05:13.810 --> 05:19.410
+Now I can go ahead in my update method and I can start to music
+
+05:22.200 --> 05:23.490
+with play.
+
+05:23.730 --> 05:25.430
+So I simply called the plaintiff.
+
+05:25.710 --> 05:33.450
+Now of course if I do that I need to be sure that music exists so that there is some music I can check
+
+05:33.450 --> 05:35.150
+here if music exists.
+
+05:35.310 --> 05:40.180
+So if it's not empty only then play the music.
+
+05:40.230 --> 05:42.240
+What that does is it checks.
+
+05:42.240 --> 05:45.770
+Is there an audio source in music or is there not.
+
+05:45.780 --> 05:48.090
+And if there's not then it will not run.
+
+05:48.510 --> 05:51.600
+So let's check that out.
+
+05:51.630 --> 05:53.970
+Sound behavior is going to get a new variable here.
+
+05:53.970 --> 05:58.440
+As you can see music now can drag the audio source and where they get it from.
+
+05:58.440 --> 06:00.050
+Well actually from here.
+
+06:00.060 --> 06:03.140
+So I dragged the audio source from here to there.
+
+06:03.450 --> 06:09.660
+And now let's de-activate play on awake so I'm going to deactivate that and if I run the game now it
+
+06:09.660 --> 06:13.110
+shouldn't play any sound.
+
+06:13.110 --> 06:15.170
+I hope you hear that they don't hear anything.
+
+06:15.180 --> 06:21.380
+And now let's press the space key and the music starts.
+
+06:21.750 --> 06:23.430
+So it's not great music.
+
+06:23.430 --> 06:31.900
+At least the beginning is a bit weird but then the music starts.
+
+06:32.120 --> 06:32.730
+All right.
+
+06:32.900 --> 06:41.180
+And likewise of course you can go ahead here and check if the music is currently running.
+
+06:41.990 --> 06:52.420
+So if music that is playing so well maybe you should use the square brackets here.
+
+06:52.430 --> 07:00.180
+If music is playing then don't play any music and else play music.
+
+07:00.470 --> 07:02.880
+So if music is playing don't play music.
+
+07:02.960 --> 07:07.230
+And so it means music thought stop.
+
+07:07.310 --> 07:12.510
+So stop the music and otherwise play the music.
+
+07:12.510 --> 07:12.990
+All right.
+
+07:13.080 --> 07:17.640
+Let's check that out again and pressed play.
+
+07:17.810 --> 07:19.550
+No music is running.
+
+07:19.550 --> 07:21.450
+I pressed the play button.
+
+07:24.870 --> 07:26.600
+And there's some music coming up.
+
+07:26.640 --> 07:27.390
+You might hear it
+
+07:34.820 --> 07:35.120
+right.
+
+07:35.130 --> 07:41.290
+And I press the space key again and the music stops.
+
+07:41.390 --> 07:48.680
+I press it again as you can see the music starts from the start I press it again and it's gone.
+
+07:49.760 --> 07:52.300
+So that's how easy it is.
+
+07:52.520 --> 07:59.830
+You can of course check out what other methods the music or the audio source class has.
+
+07:59.840 --> 08:08.600
+So here audio source for example if you mute you could mute the music and not stop it so it would still
+
+08:08.600 --> 08:08.900
+run.
+
+08:08.900 --> 08:11.750
+But that wasn't wouldn't be any sound coming out.
+
+08:11.900 --> 08:16.390
+Then you can of course pause it can change the pitch.
+
+08:16.460 --> 08:18.650
+As you can see there are methods and proper DCU.
+
+08:18.860 --> 08:20.120
+So you could change the pitch.
+
+08:20.120 --> 08:22.720
+You can change the property mute.
+
+08:22.730 --> 08:28.480
+You can run the method pause which will pause the music and so forth.
+
+08:28.550 --> 08:31.510
+So there's are plenty of methods you can check them out.
+
+08:31.870 --> 08:34.100
+And yeah that's pretty much it.
+
+08:34.100 --> 08:37.720
+So he paused and unpause maybe that would be the better option.
+
+08:37.720 --> 08:41.610
+So if the music is playing for the first time you could run play.
+
+08:41.690 --> 08:47.320
+Otherwise we could run pause to stop it and then unpause to run it again.
+
+08:47.330 --> 08:49.820
+All right so let's add here.
+
+08:50.170 --> 08:51.970
+Stop and we're good to go.

@@ -1,0 +1,268 @@
+WEBVTT
+
+00:04.150 --> 00:08.480
+We'll come back and this year we are going to have a look at you.
+
+00:08.590 --> 00:12.580
+Elements and in particular we're going to have a look at text.
+
+00:12.940 --> 00:17.750
+So I've created a new project called Pong basics.
+
+00:18.080 --> 00:21.910
+And in here I want to create a UI element.
+
+00:21.910 --> 00:27.640
+So in the hierarchy of you I make a I do right click and then I go to UI.
+
+00:27.860 --> 00:29.430
+I have multiple options here.
+
+00:29.440 --> 00:33.250
+I have text image raw image button and so forth.
+
+00:33.250 --> 00:39.100
+For now I'm just going to use text and as you can see the new text appears on our screen here at the
+
+00:39.100 --> 00:40.410
+bottom left.
+
+00:40.450 --> 00:46.890
+So if we zoom out to the right position we will see this is where our text currently is.
+
+00:46.890 --> 00:48.070
+It's at the bottom left.
+
+00:48.070 --> 00:53.860
+So this is the render mode that we have for our canvas which is greenspace overlay.
+
+00:53.890 --> 01:01.700
+So what that does it will overlay whatever we assign to the UI layer or to the UI space here.
+
+01:01.990 --> 01:06.090
+On top of our game mode or game view itself.
+
+01:06.330 --> 01:14.110
+So now no matter what we have in there as a game object so lets say we add a 3D cube and position it
+
+01:14.320 --> 01:16.140
+had a 0 0 0.
+
+01:16.150 --> 01:17.170
+This is where it is.
+
+01:17.320 --> 01:20.950
+And as you can see it somewhere around here.
+
+01:20.950 --> 01:29.440
+So the game mode itself is very tiny in comparison to this huge screen that is heartens to each layer
+
+01:29.440 --> 01:33.570
+which is where you I layer are canvas which is put on top of.
+
+01:33.910 --> 01:37.150
+So thats what the screen space overlay does.
+
+01:37.150 --> 01:40.980
+There are other options for X for example screen space camera.
+
+01:41.170 --> 01:47.080
+What that will do is you need to give it a camera here run that camera and it will take a different
+
+01:47.080 --> 01:47.680
+approach.
+
+01:47.710 --> 01:55.800
+So now it's based on where the camera currently is and you have a certain canvas in between the camera
+
+01:55.870 --> 01:56.870
+and to play mode.
+
+01:56.890 --> 02:01.740
+And it's it's almost like a layer on top but it's still a slightly different approach.
+
+02:02.000 --> 02:09.430
+And then you have Worldspace where you can assign a specific width and height for your canvas and you
+
+02:09.430 --> 02:13.450
+can do some additional layer changing and so forth.
+
+02:13.450 --> 02:21.130
+We will use different render modes throughout the course so no worries there we will see those in detail
+
+02:21.130 --> 02:23.800
+in the next videos or in the next chapters.
+
+02:23.800 --> 02:28.860
+I just wanted to quickly show you the different modes now within the canvas.
+
+02:28.960 --> 02:34.080
+We have the text and at the same time we also have created an event system.
+
+02:34.180 --> 02:40.600
+So whenever we create a UI and we didn't have a UI them and before our canvas and even system are created
+
+02:40.600 --> 02:48.600
+for us directly automatically and I created the text as you can see it's a child of our canvas.
+
+02:48.670 --> 02:51.150
+So it's inside of our canvas folder.
+
+02:51.680 --> 02:56.160
+And now we can go ahead and change the text for example so we had new text.
+
+02:56.410 --> 02:59.370
+Let's change that to a plain zero.
+
+02:59.710 --> 03:02.390
+And as you can see we can barely see that zero.
+
+03:02.410 --> 03:06.230
+So let's change the font size to let's say 50.
+
+03:06.260 --> 03:09.800
+Now you might say oh damn where did it go I can't see it anymore.
+
+03:09.970 --> 03:16.720
+That has to do with the fact that the height and width don't fit with the font size anymore more so
+
+03:17.170 --> 03:24.150
+our text element itself or text UI element has a height of only 30.
+
+03:24.560 --> 03:32.480
+So only if I increase it to 4 for example 60 I will be able to see my number again on my text again.
+
+03:32.480 --> 03:38.840
+Now let's go back to 13 and say I still want to keep it at 30 but I still want to see my 0.
+
+03:38.840 --> 03:40.550
+So how can I solved otherwise.
+
+03:40.820 --> 03:43.830
+What you can do is you can use overflow.
+
+03:43.850 --> 03:49.470
+So horizontal overflow and vertical overflow will do so.
+
+03:49.480 --> 03:53.050
+That as you can see your number will still appear.
+
+03:53.270 --> 03:55.910
+Now however it's cut off.
+
+03:56.060 --> 03:58.480
+So how do I move my 0.
+
+03:58.790 --> 04:02.510
+Well you can move it from here.
+
+04:02.510 --> 04:05.930
+So let's zoom out to the point where we can actually see something.
+
+04:05.960 --> 04:13.070
+So you can move it around here as you can see with our transform editor here or with our transform tool.
+
+04:13.070 --> 04:16.390
+Now you can drag it around and you can see where it is.
+
+04:16.490 --> 04:22.450
+Another way to change the position of something is of course to change directions from here directly.
+
+04:22.550 --> 04:27.640
+So you can add values here so you could say 0 0 is the right position for you.
+
+04:27.820 --> 04:29.510
+Now the 0 is not in the center.
+
+04:29.510 --> 04:30.340
+Why is that.
+
+04:30.560 --> 04:35.010
+Well that's because the alignment of our text here is not centered.
+
+04:35.180 --> 04:41.810
+So you can align it centrally in both directions and then we'll be perfectly centered and you can still
+
+04:41.810 --> 04:44.480
+change that by changing the anchor.
+
+04:44.480 --> 04:48.580
+So here for example now it's an anchor preset to the center.
+
+04:48.680 --> 04:51.680
+You could anchor it to the top left.
+
+04:52.100 --> 04:53.560
+So now it is anchored to the top left.
+
+04:53.570 --> 04:59.270
+As you see nothing has changed except for the post Y and oppose X..
+
+04:59.360 --> 05:00.980
+So those two values have not changed.
+
+05:00.980 --> 05:08.960
+So if we bring those back to 0 and 0 you can see that our zero goes back or goes perfectly to the edge
+
+05:09.020 --> 05:11.300
+of our top left corner.
+
+05:12.480 --> 05:17.520
+Now of course we would want to move it a little bit so that we still see the zero.
+
+05:17.520 --> 05:20.580
+So let's move into our game now.
+
+05:20.640 --> 05:24.090
+Black might be that might not be the right color for you if you want to change that.
+
+05:24.090 --> 05:32.550
+You can go to the color property here and change the color to for example red or white or green or whatever
+
+05:32.550 --> 05:33.150
+you like.
+
+05:33.300 --> 05:34.500
+All right.
+
+05:34.500 --> 05:38.930
+So let's take this pink because it fits into the blue we can see it very well.
+
+05:39.970 --> 05:49.990
+And then what you can do is of course change line spacing so let's say you have a second line in here.
+
+05:54.600 --> 05:59.770
+Then you can change the line spacing so let's say you want to have a bigger distance between lines.
+
+05:59.940 --> 06:04.590
+So that's the line spacing one is totally fine.
+
+06:05.100 --> 06:08.900
+And finally of course you can change the font any time.
+
+06:08.910 --> 06:15.660
+So the standard is Israel and around no further fonts by default you can download fonts either from
+
+06:15.660 --> 06:19.680
+the store or you can import them from wherever you downloaded them for example.
+
+06:19.680 --> 06:24.810
+So you download them to your machine and then you can import it from there but be careful that you don't
+
+06:24.810 --> 06:29.650
+download fonts that you don't own because some phones actually cost money.
+
+06:29.670 --> 06:30.710
+Most of the don't.
+
+06:30.730 --> 06:36.390
+So just search for free fonts or royalty free fonts and then use those.
+
+06:36.390 --> 06:36.900
+All right.
+
+06:37.020 --> 06:39.580
+So that's about the font and the text.
+
+06:39.590 --> 06:46.660
+And now let's have a look at how we can change that number programmatically in the next video.

@@ -1,0 +1,226 @@
+WEBVTT
+
+00:04.000 --> 00:09.940
+Well come back in this video we are going to have a look at buttons and buttons are very important because
+
+00:09.940 --> 00:13.690
+they allow us for example to move from one scene to another.
+
+00:13.720 --> 00:17.100
+They allow us to choose at which level we want to be.
+
+00:17.100 --> 00:22.850
+They are important to change settings for example or with your settings menu in general to play around.
+
+00:22.960 --> 00:30.310
+So buttons are used very commonly So it's important to understand how they work and in order to add
+
+00:30.310 --> 00:31.880
+a button to our you.
+
+00:31.930 --> 00:34.780
+We need to create a button within our canvas.
+
+00:34.780 --> 00:40.380
+All right click onto canvas then go to UI and choose button.
+
+00:40.510 --> 00:48.220
+What that will do it will add a button and that button has a child which is our text so the button itself
+
+00:48.220 --> 00:53.260
+has a text property or a text child which you can then change any time.
+
+00:53.290 --> 00:56.190
+This text is similar to the text that we have seen here.
+
+00:56.200 --> 01:02.770
+The only difference is that it has a that it currently stretches to the size of its parent.
+
+01:02.770 --> 01:10.270
+So it's anchor settings and it's anchor preset is said to stretch to wards all directions as much space
+
+01:10.360 --> 01:11.350
+as you have.
+
+01:11.350 --> 01:15.670
+Which means this text will take up all the space that the button gives it.
+
+01:15.670 --> 01:21.010
+All right button itself has properties as we know them for example the transform.
+
+01:21.010 --> 01:25.450
+We have worked with that than does it with a height and so forth.
+
+01:25.450 --> 01:32.240
+It has an image script which has a property or variable called source image which you can change any
+
+01:32.250 --> 01:32.560
+time.
+
+01:32.560 --> 01:39.430
+So if you want to change the appearance of your button you could drag an image into that source image
+
+01:39.580 --> 01:40.870
+property.
+
+01:41.110 --> 01:45.610
+All right so now let's get to how we can make this button act interactive with.
+
+01:45.610 --> 01:50.830
+Because currently if we activate the game or start a game and we press on the button as you can see
+
+01:51.460 --> 01:56.680
+it indicates that something is pressed or that we press it but nothing happens.
+
+01:56.680 --> 02:02.230
+And in order to make something happen we need to have a script which has a functionality that we want
+
+02:02.230 --> 02:04.830
+to call and there are multiple different options.
+
+02:04.840 --> 02:12.140
+You could add a new empty object where you assign that script to and then you can assign to the script
+
+02:12.150 --> 02:13.630
+to the button click event.
+
+02:13.660 --> 02:16.560
+Or you could do the same thing with the button itself.
+
+02:16.570 --> 02:20.590
+So we can add a component here which is a new script.
+
+02:20.650 --> 02:29.130
+And I'm going to call that pattern behavior and what that script should do is.
+
+02:29.130 --> 02:32.190
+For now it should increase the score by one.
+
+02:32.410 --> 02:34.550
+So let's go into bad behavior.
+
+02:34.960 --> 02:40.710
+So what we can do is for example we can try to access the text behavior script from our button behavior
+
+02:40.720 --> 02:47.650
+script and then we could for example increase the text number and then set the text number in order
+
+02:47.650 --> 02:49.640
+to change the value.
+
+02:49.810 --> 02:52.800
+We can do that within button behavior itself as well.
+
+02:52.810 --> 02:58.010
+We could get access to the text UI element in here and then access it from here.
+
+02:58.090 --> 02:59.240
+Let's use this approach.
+
+02:59.260 --> 03:07.370
+So let's create a public text and in order to use text of course we need to have unity engine UI.
+
+03:07.630 --> 03:10.120
+So the namespace unity engine UI.
+
+03:10.120 --> 03:14.640
+Now we can use the text class let's call it score text.
+
+03:15.670 --> 03:20.120
+And every time that we press the button we want to increase the score text by one.
+
+03:20.290 --> 03:27.220
+So let's get rid of the start and update method and create our own method which I'm going to call public
+
+03:27.430 --> 03:32.910
+Voyt on button pressed.
+
+03:33.280 --> 03:43.930
+So let's say when I press the button I want to change the score text that text too high or button was
+
+03:44.020 --> 03:46.830
+pressed.
+
+03:47.280 --> 03:48.830
+Right.
+
+03:48.880 --> 03:50.580
+So let's try that.
+
+03:51.340 --> 03:56.920
+Let's add that to that script to our button or it is already saved.
+
+03:57.190 --> 04:01.720
+But now we need to wait a little bit until text will be shown.
+
+04:01.720 --> 04:08.710
+So the text property here as you can see cortexes there and I'm going to use the text as a score text
+
+04:09.190 --> 04:14.320
+which is this text here it's important that you use the text on top of button and not within button.
+
+04:14.320 --> 04:20.710
+All right so now I need to add an on click event so you can see there is an on click list list is empty
+
+04:20.710 --> 04:21.380
+currently.
+
+04:21.550 --> 04:29.170
+And we can press the plus button and then we need to give it an object which contains the script that
+
+04:29.170 --> 04:34.920
+has the method that should be triggered whenever we click on that part.
+
+04:34.930 --> 04:41.430
+All right so click on button or choose button here because button contains the button behavior script.
+
+04:41.650 --> 04:47.410
+If you would have the script in a different game object then you would have to choose that different
+
+04:47.410 --> 04:53.020
+game object as the one the selected object that you select here.
+
+04:53.020 --> 04:59.530
+OK so I select button and now I get this button behavior added to my options.
+
+04:59.530 --> 05:01.480
+Before that it wasn't available.
+
+05:01.480 --> 05:04.510
+And now I can choose button pressed.
+
+05:04.540 --> 05:08.220
+So let's do that one button press was chosen.
+
+05:08.230 --> 05:12.640
+Now let's go ahead and run the game and see if our button does what it should.
+
+05:12.640 --> 05:17.320
+So let's press the button and we see t d o n was pressed.
+
+05:17.350 --> 05:20.370
+So our text is changed to button was pressed.
+
+05:20.440 --> 05:28.210
+If I press as you see as it was pressed if I press if I press the space key it says button was pressed
+
+05:28.210 --> 05:29.400
+as well.
+
+05:29.410 --> 05:33.840
+All right so let's press the button and as you can see it changes the text value.
+
+05:33.940 --> 05:37.700
+So that's how simple you can use button functionality.
+
+05:37.690 --> 05:38.980
+And yeah that's it.
+
+05:38.980 --> 05:44.350
+So now you know how to use buttons in the next we will have a look at how we can use buttons in order
+
+05:44.350 --> 05:46.960
+to get from one scene to another.
+
+05:47.020 --> 05:48.110
+So see you there.
